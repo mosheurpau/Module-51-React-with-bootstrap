@@ -1,37 +1,18 @@
 import React from "react";
+import Card from "../Card/Card";
 
 const CardGroup = () => {
+  const products = [
+    { id: 1, name: "Laptop Pro", price: 12500 },
+    { id: 2, name: "Laptop Crow", price: 12500 },
+    { id: 3, name: "Laptop Grow", price: 12500 },
+  ];
   return (
     <div>
       <h2>This is my Cart</h2>
-      <button type="button" className="btn btn-primary">
-        Primary
-      </button>
-      <button type="button" className="btn btn-secondary">
-        Secondary
-      </button>
-      <button type="button" className="btn btn-success">
-        Success
-      </button>
-      <button type="button" className="btn btn-danger">
-        Danger
-      </button>
-      <button type="button" className="btn btn-warning">
-        Warning
-      </button>
-      <button type="button" className="btn btn-info">
-        Info
-      </button>
-      <button type="button" className="btn btn-light">
-        Light
-      </button>
-      <button type="button" className="btn btn-dark">
-        Dark
-      </button>
-
-      <button type="button" className="btn btn-link">
-        Link
-      </button>
+      {products.map((product) => (
+        <Card key={product.id} product={product}></Card>
+      ))}
     </div>
   );
 };
