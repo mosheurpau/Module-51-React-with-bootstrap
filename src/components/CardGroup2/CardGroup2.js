@@ -1,7 +1,8 @@
 import React from "react";
-import Card from "../Card/Card";
+import { CardGroup } from "react-bootstrap";
+import Card2 from "../Card2/Card2";
 
-const CardGroup = () => {
+const CardGroup2 = () => {
   const products = [
     { id: 1, name: "Laptop Pro", price: 12500 },
     { id: 2, name: "Laptop Crow", price: 12500 },
@@ -9,14 +10,13 @@ const CardGroup = () => {
   ];
   return (
     <div>
-      <h2>This is my Cart</h2>
-      <div class="card-group">
+      <CardGroup>
         {products.map((product) => (
-          <Card key={product.id} product={product}></Card>
+          <Card2 key={product.id} product={product}></Card2>
         ))}
-      </div>
+      </CardGroup>
     </div>
   );
 };
 
-export default CardGroup;
+export default CardGroup2;
